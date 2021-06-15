@@ -39,8 +39,8 @@ namespace ApiCallApp
                 maxNumber = comic.Num;
             }
 
-            currentNumber = comic.Num;
-
+            currentNumber = comic.Num;     
+            
             var uriSource = new Uri(comic.Img, UriKind.Absolute);
             comicImage.Source = new BitmapImage(uriSource);
 
@@ -49,6 +49,24 @@ namespace ApiCallApp
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
             await LoadImage();
+        }
+
+        private async void previousImageButton_Click(object sender, RoutedEventArgs e)
+        {
+            await LoadImage(currentNumber - 1);
+            nextImageButton.IsEnabled = true;
+        }
+
+        private void sunInformationButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private async void nextImageButton_Click(object sender, RoutedEventArgs e)
+        {                        
+            await LoadImage(currentNumber + 1);
+            if (currentNumber >= maxNumber)
+                nextImageButton.IsEnabled = false;
         }
     }
 }
