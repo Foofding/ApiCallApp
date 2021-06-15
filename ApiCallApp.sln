@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiCallApp", "ApiCallApp\ApiCallApp.csproj", "{8E974F88-E107-4C55-9672-C5DA11EFA5C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoLibrary", "DemoLibrary\DemoLibrary.csproj", "{7C82937B-A1A0-45C9-ADB3-9DABABF53EFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E974F88-E107-4C55-9672-C5DA11EFA5C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E974F88-E107-4C55-9672-C5DA11EFA5C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E974F88-E107-4C55-9672-C5DA11EFA5C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E974F88-E107-4C55-9672-C5DA11EFA5C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C82937B-A1A0-45C9-ADB3-9DABABF53EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C82937B-A1A0-45C9-ADB3-9DABABF53EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C82937B-A1A0-45C9-ADB3-9DABABF53EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C82937B-A1A0-45C9-ADB3-9DABABF53EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7F9EA3F-E250-4A84-BC75-B9B282C5C45E}
+	EndGlobalSection
+EndGlobal
