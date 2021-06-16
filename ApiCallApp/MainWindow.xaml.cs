@@ -26,10 +26,20 @@ namespace ApiCallApp
 
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); //>> will run Window_Loaded event per Main Window XAML
+
+            //Static method for creating asnyc API client for application to use.
             ApiHelper.InitializeClient();
         }
 
+
+        //upon main-window starting, LoadImage() is ran to fetch latest image from xckd comic website
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            await LoadImage();
+        }
+
+        //uses fetches comic from website. If argument is not give it is defaulted to 0 which will pull the latest comic from website. Also keeps track of what comic application is on for Prev and Next buttons.
         private async Task LoadImage(int imageNumber = 0)
         {
             var comic = await ComicProcessor.LoadComic(imageNumber);
@@ -45,11 +55,7 @@ namespace ApiCallApp
             comicImage.Source = new BitmapImage(uriSource);
 
         }
-
-        private async void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            await LoadImage();
-        }
+      
 
         private async void previousImageButton_Click(object sender, RoutedEventArgs e)
         {
