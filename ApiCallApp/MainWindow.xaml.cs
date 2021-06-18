@@ -23,6 +23,7 @@ namespace ApiCallApp
     {
         private int maxNumber = 0;
         private int currentNumber = 0;
+        public string Info { get; set; }
 
         public MainWindow()
         {
@@ -30,6 +31,8 @@ namespace ApiCallApp
 
             //Static method for creating asnyc API client for application to use.
             ApiHelper.InitializeClient();
+            comicInfo.DataContext = Info;
+
         }
 
 
@@ -37,6 +40,8 @@ namespace ApiCallApp
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
             await LoadImage();
+            
+
         }
 
         //uses fetches comic from website. If argument is not give it is defaulted to 0 which will pull the latest comic from website. Also keeps track of what comic application is on for Prev and Next buttons.
@@ -49,11 +54,14 @@ namespace ApiCallApp
                 maxNumber = comic.Num;
             }
 
-            currentNumber = comic.Num;     
+            currentNumber = comic.Num;
             
+            Info = comic.Date;
+
             var uriSource = new Uri(comic.Img, UriKind.Absolute);
             comicImage.Source = new BitmapImage(uriSource);
 
+           
         }
       
 
@@ -61,6 +69,7 @@ namespace ApiCallApp
         {
             await LoadImage(currentNumber - 1);
             nextImageButton.IsEnabled = true;
+            
         }
 
         private void sunInformationButton_Click(object sender, RoutedEventArgs e)

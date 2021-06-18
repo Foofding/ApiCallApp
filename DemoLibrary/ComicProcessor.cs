@@ -27,8 +27,8 @@ namespace DemoLibrary
             {
                 if(response.IsSuccessStatusCode)
                 {
-                    //gathers json key/values data and stores them in ComicModel class (Num, Img)
-                    ComicModel comic = await response.Content.ReadAsAsync<ComicModel>();
+                    //gathers json key/values data and stores them in ComicModel class (Num, Img, Day, Month, Year, Title)
+                    ComicModel comic = await response.Content.ReadAsAsync<ComicModel>();                           
                     return comic;
                 }
                 else
@@ -36,7 +36,6 @@ namespace DemoLibrary
                     throw new Exception(response.ReasonPhrase);
                 }
             }
-
         }
 
 

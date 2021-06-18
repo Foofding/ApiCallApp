@@ -18,7 +18,8 @@
             <Button x:Name="nextImageButton" Padding="15" Margin="15" Click="nextImageButton_Click" IsEnabled="false">Next</Button>
         </StackPanel>
 
-        <Image Grid.Row="1" x:Name="comicImage" Margin="10"/>
-        
+        <Image Grid.Row="1" x:Name="comicImage" Margin="10,10,10,40"/>
+        <Label x:Name="comicInfo"  Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Content="{Binding Info}" FontSize="50"/>
+
     </Grid>
 </Window>
