@@ -5,12 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ApiCallApp"
        mc:Ignorable="d" FontSize="22"
-        Title="SunInfo" Height="450" Width="800">
+        Title="Local Sun Info"  Loaded="Window_Loaded" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
     <Grid>
-        <StackPanel>
-            <Button x:Name="loadSunInfo" Margin="20">Load Sun Info</Button>
-            <TextBlock x:Name="sunriseText" Margin="20"/>
-            <TextBlock x:Name="sunsetText" Margin="20"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Orientation="Horizontal">
+            <StackPanel Orientation="Vertical" Margin="5">
+                <Image x:Name="SunriseImage" Source="sunrise-100px.jpg" Width="120"/>
+                <TextBlock x:Name="FirstLightText" Margin="10,10,10,0" FontSize="18" Foreground="DarkGray" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="SunriseText" Margin="10,10,10,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="5">
+                <Image x:Name="SunsetImage" Source="sunset-100px.jpg" Width="120"/>
+                <TextBlock x:Name="SunsetText" Margin="10,10,10,0"/>
+                <TextBlock x:Name="LastLightText" Margin="10,10,10,0" FontSize="18" Foreground="DarkGray" HorizontalAlignment="Center"/>
+            </StackPanel>       
         </StackPanel>
     </Grid>
 </Window>

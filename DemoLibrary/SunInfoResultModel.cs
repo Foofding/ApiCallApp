@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DemoLibrary
 {
-    class SunInfoResultModel
+    public class SunInfoResultModel
     {
         public SunInfoModel Results { get; set; }
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DemoLibrary
 {
-    class SunInfoProcessor
+    public class SunInfoProcessor
     {
         public static async Task<SunInfoResultModel> GetSunsetTime(string url)
         {

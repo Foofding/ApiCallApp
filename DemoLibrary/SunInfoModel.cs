@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace DemoLibrary
 {
-    class SunInfoModel
+    public class SunInfoModel
     {
         public DateTime SunRise { get; set; }
         public DateTime SunSet { get; set; }
+        public DateTime Civil_Twilight_Begin { get; set; }
+        public DateTime Nautical_Twilight_End { get; set; }
     }
 }

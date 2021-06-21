@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ApiCallApp"
           mc:Ignorable="d" FontSize="22" Loaded="Window_Loaded" 
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" Padding="0,0,0,10">
+        Title="XKCD Comic Viewer" Height="450" Width="800" WindowStartupLocation="CenterScreen" Padding="0,0,0,10" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -13,13 +13,13 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button x:Name="previousImageButton" Padding="15" Margin="15" Click="previousImageButton_Click">Previous</Button>
-            <Button x:Name="sunInformationButton" Padding="15" Margin="15" Click="sunInformationButton_Click">Sun Information</Button>
-            <Button x:Name="nextImageButton" Padding="15" Margin="15" Click="nextImageButton_Click" IsEnabled="false">Next</Button>
+            <Button x:Name="previousImageButton" Padding="15" Margin="15" Click="previousImageButton_Click" FontWeight="DemiBold">Previous</Button>
+            <Button x:Name="sunInformationButton" Padding="15" Margin="15" Click="sunInformationButton_Click" FontWeight="DemiBold">Sun Information</Button>
+            <Button x:Name="nextImageButton" Padding="15" Margin="15" Click="nextImageButton_Click" IsEnabled="false" FontWeight="DemiBold">Next</Button>
         </StackPanel>
 
         <Image Grid.Row="1" x:Name="comicImage" Margin="10,10,10,40"/>
-        <Label x:Name="comicInfo"  Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Content="{Binding Info}" FontSize="50"/>
+        <Label x:Name="comicInfo" Grid.Row="1" Margin="10,10,10,2" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="22" FontStyle="Italic" FontWeight="Light"/>
 
     </Grid>
 </Window>

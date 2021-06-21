@@ -39,8 +39,7 @@ namespace ApiCallApp
         //upon main-window starting, LoadImage() is ran to fetch latest image from xckd comic website
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            await LoadImage();
-            
+            await LoadImage();          
 
         }
 
@@ -55,8 +54,8 @@ namespace ApiCallApp
             }
 
             currentNumber = comic.Num;
-            
-            Info = comic.Date;
+
+            comicInfo.Content = $"{comic.Date}: {comic.Title}";
 
             var uriSource = new Uri(comic.Img, UriKind.Absolute);
             comicImage.Source = new BitmapImage(uriSource);
@@ -74,7 +73,8 @@ namespace ApiCallApp
 
         private void sunInformationButton_Click(object sender, RoutedEventArgs e)
         {
-
+            SunInfo sunInfoWindow = new SunInfo();
+            sunInfoWindow.Show();
         }
 
         private async void nextImageButton_Click(object sender, RoutedEventArgs e)
